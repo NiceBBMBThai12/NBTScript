@@ -1,0 +1,328 @@
+game.StarterGui:SetCore("SendNotification", {
+	Title = "NBT Script";
+	Text = "Made By NiceBBMB Thai",
+	Icon = "rbxassetid://6394116489";
+	Duration = 2;
+})
+wait(0)
+game.StarterGui:SetCore("SendNotification", {
+	Title = "NBT Script";
+	Text = "Made By NiceBBMB Thai",
+	Icon = "rbxassetid://6394114983";
+	Duration = 2;
+})
+wait(0)
+game.StarterGui:SetCore("SendNotification", {
+	Title = "YouTue";
+	Text = "YouTube>NiceBBMB Thai",
+	Icon = "rbxassetid://6394220233";
+	Duration = 60;
+})
+wait(0)
+game.StarterGui:SetCore("SendNotification", {
+	Title = "NBT Discord";
+	Text = "discord.gg/Ke6acpq",
+	Icon = "rbxassetid://6394207987";
+	Duration = 60;
+})
+wait(0)
+game.StarterGui:SetCore("SendNotification", {
+	Title = "Loading";
+	Text = "Loading GUI",
+	Icon = "rbxassetid://6394361852";
+	Duration = 1;
+})
+wait(3)
+game.StarterGui:SetCore("SendNotification", {
+	Title = "Loading";
+	Text = "Loading GUI Is Complete.",
+	Icon = "rbxassetid://6394336791";
+	Duration = 0;
+})
+local NBT = Instance.new("ScreenGui")
+local NBT_2 = Instance.new("Frame")
+local x = Instance.new("TextButton")
+local telepostmore = Instance.new("TextLabel")
+local telepostmodsboss = Instance.new("TextLabel")
+local NBT_3 = Instance.new("TextLabel")
+local Num = Instance.new("TextBox")
+local SetSpeed = Instance.new("TextButton")
+local SetJump = Instance.new("TextButton")
+local More = Instance.new("TextLabel")
+local TpToSpawnAll = Instance.new("TextLabel")
+local spawnone = Instance.new("TextButton")
+local boss = Instance.new("TextButton")
+local spawntwo = Instance.new("TextButton")
+local shop = Instance.new("TextButton")
+
+--Properties:
+
+NBT.Name = "NBT"
+NBT.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+NBT_2.Name = "NBT"
+NBT_2.Parent = NBT
+NBT_2.Active = true
+NBT_2.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+NBT_2.BorderColor3 = Color3.fromRGB(55, 16, 62)
+NBT_2.BorderSizePixel = 2
+NBT_2.Position = UDim2.new(0.374178678, 0, 0.228155345, 0)
+NBT_2.Size = UDim2.new(0, 577, 0, 447)
+
+x.Name = "x"
+x.Parent = NBT_2
+x.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+x.BackgroundTransparency = 1.000
+x.Position = UDim2.new(0.930416942, 0, 0, 0)
+x.Size = UDim2.new(0, 40, 0, 37)
+x.Font = Enum.Font.SourceSans
+x.Text = "x"
+x.TextColor3 = Color3.fromRGB(24, 78, 255)
+x.TextScaled = true
+x.TextSize = 50.000
+x.TextStrokeColor3 = Color3.fromRGB(255, 0, 98)
+x.TextStrokeTransparency = 0.000
+x.TextWrapped = true
+
+telepostmore.Name = "telepostmore"
+telepostmore.Parent = NBT_2
+telepostmore.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+telepostmore.BackgroundTransparency = 1.000
+telepostmore.Position = UDim2.new(0.6560269, 0, 0.113217309, 0)
+telepostmore.Size = UDim2.new(0, 200, 0, 50)
+telepostmore.Font = Enum.Font.RobotoMono
+telepostmore.Text = "Telepost More"
+telepostmore.TextColor3 = Color3.fromRGB(255, 255, 255)
+telepostmore.TextSize = 14.000
+
+telepostmodsboss.Name = "telepostmodsboss"
+telepostmodsboss.Parent = NBT_2
+telepostmodsboss.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+telepostmodsboss.BackgroundTransparency = 1.000
+telepostmodsboss.Position = UDim2.new(0.2963489, 0, 0.0526483618, 0)
+telepostmodsboss.Size = UDim2.new(0, 200, 0, 50)
+telepostmodsboss.Font = Enum.Font.RobotoMono
+telepostmodsboss.Text = "Telepost Mods Boss"
+telepostmodsboss.TextColor3 = Color3.fromRGB(255, 255, 255)
+telepostmodsboss.TextSize = 14.000
+
+NBT_3.Name = "NBT"
+NBT_3.Parent = NBT_2
+NBT_3.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+NBT_3.BorderSizePixel = 0
+NBT_3.Position = UDim2.new(0.372781456, 0, -0.00166595448, 0)
+NBT_3.Size = UDim2.new(0, 68, 0, 29)
+NBT_3.Font = Enum.Font.PatrickHand
+NBT_3.Text = "NBT Script"
+NBT_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+NBT_3.TextSize = 25.000
+
+Num.Name = "Num"
+Num.Parent = NBT_2
+Num.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Num.BackgroundTransparency = 0.980
+Num.Position = UDim2.new(0.00784393214, 0, 0.0694797412, 0)
+Num.Size = UDim2.new(0, 200, 0, 21)
+Num.Font = Enum.Font.SourceSans
+Num.PlaceholderText = "Num"
+Num.Text = ""
+Num.TextColor3 = Color3.fromRGB(255, 0, 4)
+Num.TextSize = 14.000
+
+SetSpeed.Name = "SetSpeed"
+SetSpeed.Parent = NBT_2
+SetSpeed.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SetSpeed.BackgroundTransparency = 0.980
+SetSpeed.Position = UDim2.new(0.0177395176, 0, 0.156005099, 0)
+SetSpeed.Size = UDim2.new(0, 182, 0, 43)
+SetSpeed.Font = Enum.Font.Roboto
+SetSpeed.Text = "Set Speed"
+SetSpeed.TextColor3 = Color3.fromRGB(255, 255, 255)
+SetSpeed.TextSize = 14.000
+
+SetJump.Name = "SetJump"
+SetJump.Parent = NBT_2
+SetJump.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SetJump.BackgroundTransparency = 0.980
+SetJump.Position = UDim2.new(0.0167394876, 0, 0.258040279, 0)
+SetJump.Size = UDim2.new(0, 182, 0, 36)
+SetJump.Font = Enum.Font.Roboto
+SetJump.Text = "Set Jump"
+SetJump.TextColor3 = Color3.fromRGB(255, 255, 255)
+SetJump.TextSize = 14.000
+
+More.Name = "More"
+More.Parent = NBT_2
+More.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+More.BackgroundTransparency = 1.000
+More.Position = UDim2.new(0.0188747719, 0, 0.0103090405, 0)
+More.Size = UDim2.new(0, 182, 0, 15)
+More.Font = Enum.Font.SourceSans
+More.Text = "More"
+More.TextColor3 = Color3.fromRGB(90, 0, 0)
+More.TextScaled = true
+More.TextSize = 14.000
+More.TextStrokeColor3 = Color3.fromRGB(249, 233, 255)
+More.TextStrokeTransparency = 0.000
+More.TextWrapped = true
+
+TpToSpawnAll.Name = "TpToSpawnAll"
+TpToSpawnAll.Parent = NBT_2
+TpToSpawnAll.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TpToSpawnAll.BackgroundTransparency = 1.000
+TpToSpawnAll.BorderSizePixel = 0
+TpToSpawnAll.Position = UDim2.new(0.315895885, 0, 0.336022884, 0)
+TpToSpawnAll.Size = UDim2.new(0, 200, 0, 50)
+TpToSpawnAll.Font = Enum.Font.SourceSans
+TpToSpawnAll.Text = "Tp To Spawn All"
+TpToSpawnAll.TextColor3 = Color3.fromRGB(255, 255, 255)
+TpToSpawnAll.TextSize = 14.000
+
+spawnone.Name = "spawnone"
+spawnone.Parent = NBT_2
+spawnone.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+spawnone.BackgroundTransparency = 0.980
+spawnone.Position = UDim2.new(0.316199541, 0, 0.448501676, 0)
+spawnone.Size = UDim2.new(0, 200, 0, 71)
+spawnone.Font = Enum.Font.SourceSans
+spawnone.Text = "Spawn One"
+spawnone.TextColor3 = Color3.fromRGB(255, 255, 255)
+spawnone.TextSize = 14.000
+spawnone.MouseButton1Click:Connect(function()
+	local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+	local location = CFrame.new(-5405.65869, 21.6066723, 1038.28345)
+	local humanoid = game.Players.LocalPlayer.Character.Humanoid
+	wait(0.1)
+	pl.CFrame = location
+end)
+
+boss.Name = "boss"
+boss.Parent = NBT_2
+boss.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+boss.BackgroundTransparency = 0.980
+boss.Position = UDim2.new(0.348518044, 0, 0.1546368, 0)
+boss.Size = UDim2.new(0, 174, 0, 69)
+boss.Font = Enum.Font.SourceSans
+boss.Text = "Boss"
+boss.TextColor3 = Color3.fromRGB(255, 255, 255)
+boss.TextSize = 14.000
+boss.MouseButton1Click:Connect(function()
+	local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+	local location = CFrame.new(-8136.38477, 336.105469, 3646.16895)
+	local humanoid = game.Players.LocalPlayer.Character.Humanoid
+	wait(0.1)
+	pl.CFrame = location
+end)
+
+spawntwo.Name = "spawntwo"
+spawntwo.Parent = NBT_2
+spawntwo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+spawntwo.BackgroundTransparency = 0.980
+spawntwo.Position = UDim2.new(0.317348927, 0, 0.628109753, 0)
+spawntwo.Size = UDim2.new(0, 200, 0, 71)
+spawntwo.Font = Enum.Font.SourceSans
+spawntwo.Text = "Spawn Two"
+spawntwo.TextColor3 = Color3.fromRGB(255, 255, 255)
+spawntwo.TextSize = 14.000
+spawntwo.MouseButton1Click:Connect(function()
+	local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+	local location = CFrame.new(-4371.19434, 24.5429668, -1847.81006)
+	local humanoid = game.Players.LocalPlayer.Character.Humanoid
+	wait(0.1)
+	pl.CFrame = location
+end)
+
+shop.Name = "shop"
+shop.Parent = NBT_2
+shop.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+shop.BackgroundTransparency = 0.980
+shop.Position = UDim2.new(0.691459954, 0, 0.226360068, 0)
+shop.Size = UDim2.new(0, 161, 0, 50)
+shop.Font = Enum.Font.SourceSans
+shop.Text = "Shop"
+shop.TextColor3 = Color3.fromRGB(255, 255, 255)
+shop.TextScaled = true
+shop.TextSize = 14.000
+shop.TextWrapped = true
+shop.MouseButton1Click:Connect(function()
+	local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+	local location = CFrame.new(-5372.71387, 30.6018448, 957.699463)
+	local humanoid = game.Players.LocalPlayer.Character.Humanoid
+	wait(0.1)
+	pl.CFrame = location
+end)
+
+-- Scripts:
+
+local function UQSIYIY_fake_script() -- x.LocalScript 
+	local script = Instance.new('LocalScript', x)
+
+	local Frame = script.Parent.Parent
+	local button = script.Parent
+	button.MouseButton1Click:Connect(function()
+		Frame.Visible = false
+	end)
+end
+coroutine.wrap(UQSIYIY_fake_script)()
+local function SGAJ_fake_script() -- SetJump.LocalScript 
+	local script = Instance.new('LocalScript', SetJump)
+
+	local button = script.Parent
+	local va12 = script.Parent.Parent.Num
+	button.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = va12.Text
+	end)
+end
+coroutine.wrap(SGAJ_fake_script)()
+local function IYPKTXK_fake_script() -- SetSpeed.LocalScript 
+	local script = Instance.new('LocalScript', SetSpeed)
+
+	local button = script.Parent
+	local va12 = script.Parent.Parent.Num
+	button.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = va12.Text
+	end)
+end
+coroutine.wrap(IYPKTXK_fake_script)()
+local function HWASCCD_fake_script() -- Frame.Dragify 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+		dragToggle = nil
+		local dragSpeed = 0.50
+		dragInput = nil
+		dragStart = nil
+		local dragPos = nil
+		function updateInput(input)
+			local Delta = input.Position - dragStart
+			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.30), {Position = Position}):Play()
+		end
+		Frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Frame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
+		end)
+		Frame.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
+	end
+
+	dragify(script.Parent)
+end
+coroutine.wrap(HWASCCD_fake_script)()
