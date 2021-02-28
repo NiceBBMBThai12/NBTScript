@@ -1,0 +1,14 @@
+if game.PlaceId == 5303541547 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NiceBBMBThai12/Two-Piece-NBT-Script/main/TwoPieceBy.NBTScript.lua"))()
+else
+if game.PlaceID == 1215581239 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NiceBBMBThai12/NBTScript/main/NBT%20Script%20Doomspire%20Brickbattle"))()
+else
+if game.PlaceID == 6446338433 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NiceBBMBThai12/NBTScript/main/NBT%20Script%20Legend%20Piece"))()
+else
+print("Game Not Supported")
+end
+end
+end
+
