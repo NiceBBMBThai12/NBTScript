@@ -208,7 +208,7 @@ boss.TextColor3 = Color3.fromRGB(255, 255, 255)
 boss.TextSize = 14.000
 boss.MouseButton1Click:Connect(function()
 	local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
-	local location = CFrame.new(-8136.38477, 336.105469, 3646.16895)
+	local location = CFrame.new(-7682.41992, 14.6215572, -6888.21094, 0.749131024, -5.06524742e-08, 0.662421584, -8.2897722e-10, 1, 7.74031079e-08, -0.662421584, -5.85342015e-08, 0.749131024)
 	local humanoid = game.Players.LocalPlayer.Character.Humanoid
 	wait(0.1)
 	pl.CFrame = location
