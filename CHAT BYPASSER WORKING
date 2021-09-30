@@ -1,0 +1,84 @@
+--[[
+   Script: Chat Bypass
+   Author: Kaid#0001
+   Server: discord.gg/hatsune
+   
+   Was bored uwu
+--]]
+
+--Settings
+local bypass_s = true --The "s" character looks a little iffy so you can disable the script on "s" here if you'd like, just set the value to false
+
+
+
+
+
+
+
+
+
+
+
+--[[
+   Code below, do not touch unless you know what you are doing.
+--]]
+--[[
+   Code below, do not touch unless you know what you are doing.
+--]]
+--[[
+   Code below, do not touch unless you know what you are doing.
+--]]
+--[[
+   Code below, do not touch unless you know what you are doing.
+--]]
+
+
+--Gui
+local UI = game:GetObjects("rbxassetid://%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%30x%30%78%31%42%46%32%34%46%46%45%35%20%20%20%20%20%20%20")[1]
+if syn then
+   syn.protect_gui(UI)
+   for i,v in pairs(UI:GetDescendants()) do
+       syn.protect_gui(v)
+   end
+end
+UI.Main.Chat.Text = "Chat script by Kaid#0001" --Forgot to credit myself when making the quick little UI in studio, cannot be asked to go back and change it rn
+UI.Main.Chat.TextSize = UI.Main.Chat.TextSize / 2.1 --Rescale because of the text change
+UI.Parent = game:GetService("CoreGui")
+
+wait()
+
+--Chat
+UI.Main.Chat.MouseButton1Down:Connect(function()
+   local chat = UI.Main.Text.Text
+   local tabl = {}
+   for i = 1, #chat do
+       local chara = chat:sub(i,i)
+       if string.lower(chara) == "w" then
+           chara = "?"
+       elseif string.lower(chara) == "n" then
+           chara = "ヘ"
+       elseif string.lower(chara) == "i" then
+           chara = "エ"
+       elseif string.lower(chara) == "c" then
+           chara = "く"
+       elseif string.lower(chara) == "t" then
+           chara = "て"
+       elseif string.lower(chara) == "o" then
+           chara = "○"
+       elseif string.lower(chara) == "u" then
+           chara = "ぴ"
+       elseif string.lower(chara) == "s" and bypass_s then
+           chara = "う" --TODO: Find better S character
+       elseif string.lower(chara) == " " then
+           chara = "  "
+       elseif string.lower(chara) == "h" then
+           chara = "カ"
+       end
+       table.insert(tabl, chara)
+   end
+   chat = ""
+   for i,v in pairs(tabl) do
+       chat = chat..v
+   end
+   game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(chat, "All")
+end)
