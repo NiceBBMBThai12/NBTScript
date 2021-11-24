@@ -1,9 +1,3 @@
--- Made By Sanda#9197
--- 11/11/2021
--- https://discord.gg/Tdgc99E62U
--- This Is Nislcs Free UI
--- Change Theme/Script Whenever You Want Just Don't Steal Credits !
--- Enjoy C:
 game:GetService("UserInputService").InputBegan:Connect(function(key)
 if key.KeyCode == Enum.KeyCode.RightControl then
    game:GetService("CoreGui").NOOBUI.Enabled = not game:GetService("CoreGui").NOOBUI.Enabled
@@ -882,5 +876,3 @@ function Nislcs:NewWindow(windowtitle, versiontext)
 
     return NislcsWindow
 end
-
-return Nislcs
