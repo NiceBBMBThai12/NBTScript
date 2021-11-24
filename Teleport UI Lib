@@ -876,3 +876,5 @@ function Nislcs:NewWindow(windowtitle, versiontext)
 
     return NislcsWindow
 end
+
+return Nislcs
