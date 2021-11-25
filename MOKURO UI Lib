@@ -278,7 +278,7 @@ function DiscordLib:Window(text,mainclr,cls)
 	UserTag.TextXAlignment = Enum.TextXAlignment.Left
 
 	UserName.Text = user
-	UserTag.Text = "" .. tag
+	UserTag.Text = "#" .. tag
 
 	ServersHoldFrame.Name = "ServersHoldFrame"
 	ServersHoldFrame.Parent = MainFrame
