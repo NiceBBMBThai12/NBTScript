@@ -13,10 +13,8 @@ local Button = Instance.new("TextButton")
 local OpenUiButton = Instance.new("ImageLabel")
 local uioffon = Instance.new("TextButton")
 
---Properties:
-
 uirimuru.Name = "uirimuru"
-uirimuru.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+uirimuru.Parent = game.CoroGui
 
 rinuruui.Name = "rinuruui"
 rinuruui.Parent = uirimuru
