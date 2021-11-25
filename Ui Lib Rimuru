@@ -1,3 +1,6 @@
+--[[Ui Roblox Make By NBT HUB
+Join My Discord https://discord.io/NBTV2
+--]]
 local library = {}
 
 function library:NewWindow(textt1,textt2)
