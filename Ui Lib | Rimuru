@@ -130,5 +130,5 @@ end)
 	end
 	return nbt
 end
-end
 return library
+end
