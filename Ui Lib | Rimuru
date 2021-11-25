@@ -1,0 +1,136 @@
+local library = {}
+
+function library:NewWindow(textt1,textt2)
+local uirimuru = Instance.new("ScreenGui")
+local rinuruui = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local taxtlable = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local tab = Instance.new("ScrollingFrame")
+local UIGridLayout = Instance.new("UIGridLayout")
+local Button = Instance.new("TextButton")
+local OpenUiButton = Instance.new("ImageLabel")
+local uioffon = Instance.new("TextButton")
+
+--Properties:
+
+uirimuru.Name = "uirimuru"
+uirimuru.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+rinuruui.Name = "rinuruui"
+rinuruui.Parent = uirimuru
+rinuruui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+rinuruui.BackgroundTransparency = 1.000
+rinuruui.Position = UDim2.new(0.122189611, 0, 0.1503876, 0)
+rinuruui.Size = UDim2.newUi Lib | Rimu0, 554, 0, 320)
+rinuruui.Visible = false
+rinuruui.Active = true
+rinuruui.Draggable = true
+
+ImageLabel.Parent = rinuruui
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Position = UDim2.new(0.0534814522, 0, -0.00312499981, 0)
+ImageLabel.Size = UDim2.new(0, 555, 0, 320)
+ImageLabel.Image = "rbxassetid://8092057278"
+
+taxtlable.Name = "taxtlable"
+taxtlable.Parent = ImageLabel
+taxtlable.AnchorPoint = Vector2.new(0.5, 0.5)
+taxtlable.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+taxtlable.BackgroundTransparency = 1.000
+taxtlable.Position = UDim2.new(0.500352859, 0, 0.0758721083, 0)
+taxtlable.Size = UDim2.new(0, 554, 0, 50)
+taxtlable.Image = "rbxassetid://3570695787"
+taxtlable.ImageColor3 = Color3.fromRGB(207, 255, 245)
+taxtlable.ScaleType = Enum.ScaleType.Slice
+taxtlable.SliceCenter = Rect.new(100, 100, 100, 100)
+taxtlable.SliceScale = 0.120
+
+TextLabel.Parent = taxtlable
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(-0.00106839067, 0, -0.0096125789, 0)
+TextLabel.Size = UDim2.new(0, 138, 0, 50)
+TextLabel.Font = Enum.Font.SciFi
+TextLabel.Text = textt1
+TextLabel.TextColor3 = Color3.fromRGB(11, 68, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = taxtlable
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.228173435, 0, -0.0096125789, 0)
+TextLabel_2.Size = UDim2.new(0, 142, 0, 50)
+TextLabel_2.Font = Enum.Font.SciFi
+TextLabel_2.Text = textt2
+TextLabel_2.TextColor3 = Color3.fromRGB(11, 68, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+tab.Name = "tab"
+tab.Parent = ImageLabel
+tab.Active = true
+tab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+tab.BackgroundTransparency = 1.000
+tab.BorderSizePixel = 0
+tab.Position = UDim2.new(0.00125375006, 0, 0.15370369, 0)
+tab.Size = UDim2.new(0, 568, 0, 270)
+
+OpenUiButton.Name = "OpenUiButton"
+OpenUiButton.Parent = uirimuru
+OpenUiButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OpenUiButton.BackgroundTransparency = 1.000
+OpenUiButton.Position = UDim2.new(0.0161414444, 0, 0.455813974, 0)
+OpenUiButton.Size = UDim2.new(0, 57, 0, 56)
+OpenUiButton.Image = "rbxassetid://8091862498"
+
+uioffon.Name = "uioffon"
+uioffon.Parent = OpenUiButton
+uioffon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uioffon.BackgroundTransparency = 1.000
+uioffon.Position = UDim2.new(-0.00888657197, 0, 0, 0)
+uioffon.Size = UDim2.new(0, 57, 0, 55)
+uioffon.Font = Enum.Font.SourceSans
+uioffon.Text = ""
+uioffon.TextColor3 = Color3.fromRGB(0, 0, 0)
+uioffon.TextSize = 14.000
+uioffon.MouseButton1Click:Connect(function()
+rinuruui.Visible = not rinuruui.Visible
+end)
+	
+local nbt = {}
+
+function nbt:Button(name,callback)
+
+UIGridLayout.Parent = tab
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout.CellSize = UDim2.new(0, 135, 0, 50)
+
+Button.Name = "Button"
+Button.Parent = tab
+Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button.BackgroundTransparency = 0.500
+Button.BorderSizePixel = 0
+Button.Position = UDim2.new(0.0168445967, 0, -0.00129153545, 0)
+Button.Size = UDim2.new(0, 136, 0, 42)
+Button.Font = Enum.Font.SourceSans
+Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button.TextScaled = true
+Button.TextSize = 14.000
+Button.TextWrapped = true
+Button.Text = name
+Button.MouseButton1Click:Connect(function()
+callback()
+end)
+	end
+	return nbt
+end
+
+return library
