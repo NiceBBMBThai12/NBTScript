@@ -127,8 +127,7 @@ Button.Text = name
 Button.MouseButton1Click:Connect(function()
 callback()
 end)
-	end
-	return nbt
+end
+return nbt
 end
 return library
-end
