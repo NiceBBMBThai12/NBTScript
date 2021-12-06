@@ -99,6 +99,7 @@ function create:Win()
 
     local Logo = Instance.new("ImageLabel")
     
+    
     Logo.Name = "Logo"
     Logo.Parent = Main
     Logo.AnchorPoint = Vector2.new(0.5, 0.5)
