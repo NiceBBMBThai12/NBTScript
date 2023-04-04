@@ -1,6 +1,6 @@
 	local maincolor = Color3.fromRGB(255,163,26)
 	local firstpage = '' 
-	local old = game.CoreGui:FindFirstChild('ScreenGui') 
+	local old = game.CoreGui:FindFirstChild('NBTHUB') 
 	if old  then 
 		old:Destroy()
 	end
@@ -65,13 +65,13 @@
 			end
 		end)
 	end
-	local ScreenGui = Instance.new("ScreenGui")
+	local NBTHUB = Instance.new("ScreenGui")
 	local bind = Enum.KeyCode.RightControl
 	function library:SetBind(new)
 		bind = new 
 	end
 	function library:Destroy()
-		ScreenGui:Destroy()
+		NBTHUB:Destroy()
 	end
 	function library:NewWindow(porn,hub)
 		
@@ -79,7 +79,7 @@
 		local Mouse = game.Players.LocalPlayer:GetMouse()
 		local Circle = Instance.new("ImageLabel")
 		Circle.Name = "Circle"
-		Circle.Parent = ScreenGui
+		Circle.Parent = NBTHUB
 		Circle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		Circle.BackgroundTransparency = 1
 		Circle.ZIndex = 10
@@ -89,7 +89,7 @@
 		local function CircleClick(Button, X, Y)
 			coroutine.resume(coroutine.create(function()
 				Button.ClipsDescendants = true
-				local Circle = ScreenGui:WaitForChild("Circle"):Clone()
+				local Circle = NBTHUB:WaitForChild("Circle"):Clone()
 				Circle.Parent = Button
 				local NewX = X - Circle.AbsolutePosition.X
 				local NewY = Y - Circle.AbsolutePosition.Y
@@ -122,9 +122,9 @@
 		local Porn = Instance.new("TextLabel")
 		local Custom = Instance.new("TextLabel")
 		local btnGradient_2 = Instance.new("UIGradient")
-		ScreenGui.Parent = game.CoreGui
+		NBTHUB.Parent = game.CoreGui
 		MainWindow.Name = "MainWindow"
-		MainWindow.Parent = ScreenGui
+		MainWindow.Parent = NBTHUB
 		MainWindow.AnchorPoint = Vector2.new(0.5, 0.5)
 		MainWindow.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
 		MainWindow.BackgroundTransparency = 1
@@ -179,7 +179,7 @@
 		Close.MouseButton1Click:Connect(function()
 			tween:Create(MainWindow,TweenInfo.new(0.2,Enum.EasingStyle.Back,Enum.EasingDirection.In),{Size = UDim2.new(0,0,0,0)}):Play()
 			wait(0.3)
-			ScreenGui:Destroy()
+			NBTHUB:Destroy()
 		end)
 		Close.MouseLeave:Connect(function()
 			tween:Create(Close,TweenInfo.new(0.2,Enum.EasingStyle.Sine),{ImageColor3 = maincolor}):Play()
