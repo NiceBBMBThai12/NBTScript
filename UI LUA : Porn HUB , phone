@@ -159,21 +159,19 @@ CP.Parent = Frame
 CP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 CP.Size = UDim2.new(0, 42, 0, 41)
 CP.Font = Enum.Font.SourceSans
-CP.Text = "C"
+CP.Text = "C/P"
 CP.TextColor3 = Color3.fromRGB(0, 0, 0)
 CP.TextSize = 14.000
 
-local function TGOH_fake_script() -- CP.LocalScript 
+local function TGOH_fake_script()
     local script = Instance.new('LocalScript', CP)
 
     script.Parent.MouseButton1Click:Connect(function()
         if library.toggled == false then
             library.toggled = true 
-            CP.Name = "C"
             tween:Create(MainWindow,TweenInfo.new(0.4,Enum.EasingStyle.Back,Enum.EasingDirection.In),{Size = UDim2.new(0, 0, 0, 0)}):Play()
         else 
             library.toggled = false 
-            CP.Name = "P"
             tween:Create(MainWindow,TweenInfo.new(0.4,Enum.EasingStyle.Back),{Size = UDim2.new(0, 440, 0, 282)}):Play()
         end 
     end)
