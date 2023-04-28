@@ -122,6 +122,23 @@
 		local Porn = Instance.new("TextLabel")
 		local Custom = Instance.new("TextLabel")
 		local btnGradient_2 = Instance.new("UIGradient")
+		local Frame = Instance.new("Frame")
+        local CP = Instance.new("TextButton")
+        
+        Frame.Parent = ScreenGui
+        Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        Frame.Position = UDim2.new(0.0683919936, 0, 0.177954853, 0)
+        Frame.Size = UDim2.new(0, 42, 0, 41)
+        
+        CP.Name = "CP"
+        CP.Parent = Frame
+        CP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        CP.Size = UDim2.new(0, 42, 0, 41)
+        CP.Font = Enum.Font.SourceSans
+        CP.Text = "C/P"
+        CP.TextColor3 = Color3.fromRGB(0, 0, 0)
+        CP.TextSize = 14.000
+
 		ScreenGui.Parent = game.CoreGui
 		MainWindow.Name = "MainWindow"
 		MainWindow.Parent = ScreenGui
@@ -144,23 +161,7 @@
 		tween:Create(MainWindow,TweenInfo.new(0.4,Enum.EasingStyle.Back),{Size = UDim2.new(0, 440, 0, 282)}):Play()
 		dragify(MainWindow)
 		game:GetService("UserInputService").InputBegan:Connect(function(input)
-local Frame = Instance.new("Frame")
-local CP = Instance.new("TextButton")
-
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.Position = UDim2.new(0.0683919936, 0, 0.177954853, 0)
-Frame.Size = UDim2.new(0, 42, 0, 41)
-
-CP.Name = "CP"
-CP.Parent = Frame
-CP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CP.Size = UDim2.new(0, 42, 0, 41)
-CP.Font = Enum.Font.SourceSans
-CP.Text = "C/P"
-CP.TextColor3 = Color3.fromRGB(0, 0, 0)
-CP.TextSize = 14.000
-
+		    
 local function TGOH_fake_script()
     local script = Instance.new('LocalScript', CP)
     script.Parent.MouseButton1Down:Connect(function()
