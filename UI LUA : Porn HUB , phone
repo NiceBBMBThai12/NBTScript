@@ -164,7 +164,6 @@ CP.TextSize = 14.000
 local function TGOH_fake_script()
     local script = Instance.new('LocalScript', CP)
 
-    script.Parent.MouseButton1Click:Connect(function()
 local CAS = game:GetService("ContextActionService")
 local function Action()
 	if library.toggled == false then
@@ -177,7 +176,7 @@ local function Action()
 end
 
 local Button = CAS:BindAction("MYCOOLACTION", Action, true, Enum.KeyCode.RightControl)
-    end)
+
 end
 coroutine.wrap(TGOH_fake_script)()
 			if input.KeyCode == bind then
