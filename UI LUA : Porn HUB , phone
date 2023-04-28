@@ -165,7 +165,18 @@ local function TGOH_fake_script()
     local script = Instance.new('LocalScript', CP)
 
     script.Parent.MouseButton1Click:Connect(function()
-local Button = CAS:BindAction("MYCOOLACTION", Action, true, Enum.KeyCode.F)
+local CAS = game:GetService("ContextActionService")
+local function Action()
+	if library.toggled == false then
+    	library.toggled = true  
+    	tween:Create(MainWindow,TweenInfo.new(0.4,Enum.EasingStyle.Back,Enum.EasingDirection.In),{Size = UDim2.new(0, 0, 0, 0)}):Play()
+    else 
+    	library.toggled = false 
+    	tween:Create(MainWindow,TweenInfo.new(0.4,Enum.EasingStyle.Back),{Size = UDim2.new(0, 440, 0, 282)}):Play()
+    end
+end
+
+local Button = CAS:BindAction("MYCOOLACTION", Action, true, Enum.KeyCode.RightControl)
     end)
 end
 coroutine.wrap(TGOH_fake_script)()
