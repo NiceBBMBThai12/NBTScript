@@ -163,10 +163,11 @@ CP.TextSize = 14.000
 
 local function TGOH_fake_script()
     local script = Instance.new('LocalScript', CP)
-
+    
 local CAS = game:GetService("ContextActionService")
-local function Action()
-	if library.toggled == false then
+
+local function handleAction()
+    	if library.toggled == false then
     	library.toggled = true  
     	tween:Create(MainWindow,TweenInfo.new(0.4,Enum.EasingStyle.Back,Enum.EasingDirection.In),{Size = UDim2.new(0, 0, 0, 0)}):Play()
     else 
@@ -174,9 +175,8 @@ local function Action()
     	tween:Create(MainWindow,TweenInfo.new(0.4,Enum.EasingStyle.Back),{Size = UDim2.new(0, 440, 0, 282)}):Play()
     end
 end
-
-local Button = CAS:BindAction("MYCOOLACTION", Action, true, Enum.KeyCode.RightControl)
-
+ 
+ContextActionService:BindAction("Interact", handleAction, true, Enum.KeyCode.T, Enum.KeyCode.RightControl)
 end
 coroutine.wrap(TGOH_fake_script)()
 			if input.KeyCode == bind then
