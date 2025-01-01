@@ -511,52 +511,131 @@ function L_1_:CreateWindow(L_26_arg0, L_27_arg1)
 				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(3, 227, 122))
 			},
 		})
+		function L_28_:CreateSelection(L_74_arg0, L_75_arg1)
+		L_28_.Created += 1
+		local L_76_ = createObject("TextButton", {
+			Name = "SelectionButton",
+			Parent = L_41_,
+			BackgroundColor3 = Color3.fromRGB(20, 20, 20),
+			Size = UDim2.new(1, 0, -0.017391303554177284, 50),
+			AutoButtonColor = false,
+			Font = Enum.Font.Gotham,
+			Text = L_74_arg0.Name or "New Selection",
+			TextColor3 = Color3.fromRGB(255, 255, 255),
+			TextSize = 14,
+			TextXAlignment = Enum.TextXAlignment.Left,
+		})
+		local L_77_ = createObject("UICorner", {
+			Parent = L_76_,
+			CornerRadius = UDim.new(0, 4),
+		})
+		local L_78_ = createObject("UIPadding", {
+			Parent = L_76_,
+			PaddingLeft = UDim.new(0, 50),
+		})
+		local L_79_ = createObject("ImageButton", {
+			Name = "done_all",
+			Parent = L_76_,
+			AnchorPoint = Vector2.new(0.5, 0.5),
+			BackgroundTransparency = 1,
+			LayoutOrder = 7,
+			Position = UDim2.new(0.8817330002784729, 0, 0.4999999701976776, 0),
+			Size = UDim2.new(0, 17, 0, 17),
+			ZIndex = 2,
+			Image = "rbxassetid://3926305904",
+			ImageRectOffset = Vector2.new(4, 444),
+			ImageRectSize = Vector2.new(36, 36),
+		})
+		local L_80_ = createObject("UIGradient", {
+			Parent = L_79_,
+			Color = ColorSequence.new{
+				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(1, 180, 213)),
+				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(3, 227, 122))
+			},
+		})
+		local L_81_ = createObject("UIGradient", {
+			Parent = L_76_,
+			Enabled = false,
+			Color = ColorSequence.new{
+				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(1, 180, 213)),
+				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(3, 227, 122))
+			},
+		})
+		local L_82_ = createObject("ImageButton", {
+			Name = "CheckedCircle",
+			ImageTransparency = 1,
+			Parent = L_76_,
+			AnchorPoint = Vector2.new(0.5, 0.5),
+			BackgroundTransparency = 1,
+			LayoutOrder = 17,
+			Position = UDim2.new(-0.10421544313430786, 0, 0.5, 0),
+			Size = UDim2.new(0, 25, 0, 25),
+			ZIndex = 2,
+			Image = "rbxassetid://3926309567",
+			ImageRectOffset = Vector2.new(784, 420),
+			ImageRectSize = Vector2.new(48, 48),
+		})
+		local L_83_ = createObject("ImageButton", {
+			Name = "Circle",
+			Parent = L_76_,
+			ImageTransparency = 0,
+			AnchorPoint = Vector2.new(0.5, 0.5),
+			BackgroundTransparency = 1,
+			LayoutOrder = 16,
+			Position = UDim2.new(-0.10421544313430786, 0, 0.5, 0),
+			Size = UDim2.new(0, 25, 0, 25),
+			ZIndex = 2,
+			Image = "rbxassetid://3926305904",
+			ImageRectOffset = Vector2.new(324, 964),
+			ImageRectSize = Vector2.new(36, 36),
+		})
+		local L_84_ = createObject("UIGradient", {
+			Parent = L_82_,
+			Color = ColorSequence.new{
+				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(1, 180, 213)),
+				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(3, 227, 122))
+			},
+		})
 		local function L_85_func()
-    for L_86_forvar0, L_87_forvar1 in pairs(L_41_:GetDescendants()) do
-        if L_87_forvar1:IsA'UIGradient' and L_87_forvar1.Parent.Name ~= "done_all" then
-            L_87_forvar1.Enabled = false
-        end
-        if L_87_forvar1.Name == 'CheckedCircle' then
-            L_4_func(L_87_forvar1, 0.25, {
-                ImageTransparency = 1
-            })
-        end
-        if L_87_forvar1.Name == 'Circle' then
-            L_4_func(L_87_forvar1, 0.25, {
-                ImageTransparency = 0
-            })
-        end
-    end
-    L_4_func(L_83_, 0.25, {
-        ImageTransparency = 1
-    })
-    L_4_func(L_82_, 0.25, {
-        ImageTransparency = 0
-    })
-    L_81_.Enabled = true
-    L_80_.Enabled = true
-    L_84_.Enabled = true
-    L_28_.Selection = L_74_arg0.Flag
-    L_59_.Text = "Currently <b>" .. L_74_arg0.Status .. "</b>"
-    L_52_.Text = (L_74_arg0.Name or 'Game')
-    L_47_.Image = (L_74_arg0.Image or '')
-    L_63_.Text = "Last Updated <b>" .. (L_3_func(os.time() - L_74_arg0.UpdateDate) or 'Never') .. "</b>"
-    
-    -- Triggering script based on the Flag of the selected game
-    if L_74_arg0.Flag == "kl" then
-        local dhScript = loadstring(game:HttpGet("http://requirements-bibliographic.gl.at.ply.gg:65495/test/script_testing/king_legacy/script.lua"))()
-        dhScript()
-    elseif L_74_arg0.Flag == "f" then
-        local pfScript = loadstring(game:HttpGet("https://raw.githubusercontent.com/NongTham/TomTamHub/refs/heads/main/Fisch%5BFree%5D.lua"))()
-        pfScript()
-    elseif L_74_arg0.Flag == "los" then
-        local plScript = loadstring(game:HttpGet("https://raw.githubusercontent.com/NongTham/TomTamHub/refs/heads/main/Legends_Of_Speed.lua"))()
-        plScript()
-    elseif L_74_arg0.Flag == "thisui" then
-        local thisUIScript = loadstring(game:HttpGet("https://raw.githubusercontent.com/NiceBBMBThai12/YourScript4.lua"))()
-        thisUIScript()
-    end
-end   
+			for L_86_forvar0, L_87_forvar1 in pairs(L_41_:GetDescendants()) do
+				if L_87_forvar1:IsA'UIGradient' and L_87_forvar1.Parent.Name ~= "done_all" then
+					L_87_forvar1.Enabled = false
+				end
+				if L_87_forvar1.Name == 'CheckedCircle' then
+					L_4_func(L_87_forvar1, 0.25, {
+						ImageTransparency = 1
+					})
+				end
+				if L_87_forvar1.Name == 'Circle' then
+					L_4_func(L_87_forvar1, 0.25, {
+						ImageTransparency = 0
+					})
+				end
+			end
+			L_4_func(L_83_, 0.25, {
+				ImageTransparency = 1
+			})
+			L_4_func(L_82_, 0.25, {
+				ImageTransparency = 0
+			})
+			L_81_.Enabled = true
+			L_80_.Enabled = true
+			L_84_.Enabled = true
+			L_28_.Selection = L_74_arg0.Flag
+			L_59_.Text = "Currently <b>" .. L_74_arg0.Status .. "</b>"
+			L_52_.Text = (L_74_arg0.Name or 'Game')
+			L_47_.Image = (L_74_arg0.Image or '')
+			L_63_.Text = "Last Updated <b>" .. (L_3_func(os.time() - L_74_arg0.UpdateDate) or 'Never') .. "</b>"
+		end
+		if L_28_.Created == 1 then
+			L_85_func()
+		end
+		L_76_.MouseButton1Down:Connect(L_85_func)
+		L_82_.MouseButton1Down:Connect(L_85_func)
+		L_83_.MouseButton1Down:Connect(L_85_func)
+		L_79_.MouseButton1Down:Connect(L_85_func)
+        
+	end
 	end
 	function L_28_:Exit()
 		L_4_func(L_30_, 0.25, {
